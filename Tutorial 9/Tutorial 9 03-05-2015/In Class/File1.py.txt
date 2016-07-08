@@ -1,0 +1,14 @@
+marks=open("Marks.txt","r")
+student=[]
+count=0
+
+for line in marks:
+    student=line.split()
+    #print(student)
+    if len(student)<11:
+        print(student[0],len(student)-1,"Practical Sessions")
+        count=count+1
+print("Total Number of Students :",count)
+
+marks.close()
+    

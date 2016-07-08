@@ -1,0 +1,17 @@
+maths=open("Maths.txt","r") #Opens the file as read only
+finalmarks=open("FinalMarks.txt","w+")
+student=[]  #Initialze a list
+string="" #Initialize a string
+
+for line in maths: #loop through the lines of the file
+    student=line.split() #split the line into different items in the list. here items are split from spaces(" ")
+    if len(student)==11: #check whether the number of items in list = 11 (because it should contain name and 10 marks)
+        marks=0 #set total marks for this student to zero
+        for i in range(1,11): #loop through marks
+           marks=marks+int(student[i]) #calculate total of marks
+        string=student[0]+" "+ str(marks)+" "+str(marks/10)+"\n" #prepare a string to write
+        finalmarks.write(string) # write the string to the file FinalMarks.txt
+
+#Close both files
+maths.close()
+finalmarks.close()

@@ -1,0 +1,12 @@
+thefile=open("Maths.txt","r") #Opens the file as read only
+student=[]  #Initialze a list
+counter=0   #Initialize a variable for counting students
+
+for line in thefile: #loop through the lines of the file
+    student=line.split() #split the line into different items in the list. here items are split from spaces(" ")
+    if len(student)<11: #check whether the number of items in list < 11 (because it should contain name and 10 marks)
+        print(student[0],len(student)-1,"Practical Sessions") #print the required output
+        counter=counter+1 #increase the conter
+print("Total Number of Students :",counter) #print required output
+
+thefile.close() #close the file

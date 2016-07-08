@@ -1,0 +1,37 @@
+class Stack:
+    def __init__(self):
+        self.items=[]
+    def __repr__(self):
+        return str(self.items)
+    def pop(self):
+        return self.items.pop()
+    def push(self,obj):
+        self.items.append(obj)
+    def length(self):
+        return len(self.items)
+    def isEmpty(self):
+        return self.items==[]
+    def peek(self):
+        return self.items[-1]
+
+thestack=Stack()
+thestack.push("A")
+thestack.push("B")
+thestack.push("C")
+
+print(thestack.length())
+
+print(thestack.peek())
+
+thestack.pop()
+
+print(thestack)
+
+print(thestack.isEmpty())
+
+thestack.push("D")
+thestack.push("E")
+
+print(thestack)
+
+print(thestack.length())

@@ -1,0 +1,14 @@
+finalmarks=open("FinalMarks.txt","r")
+student=[]
+minavg=-1
+
+for line in finalmarks:
+    student=line.split()
+    avg=student[-1]
+    avg=float(avg)
+    if minavg==-1 or avg<minavg:
+        minavg=avg
+
+print("Minimum Average is",minavg)
+
+finalmarks.close()

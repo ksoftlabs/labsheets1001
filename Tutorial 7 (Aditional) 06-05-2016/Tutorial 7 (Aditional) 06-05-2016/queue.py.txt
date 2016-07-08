@@ -1,0 +1,32 @@
+class Queue:
+    def __init__(self):
+        self.items=[]
+    def __repr__(self):
+        return str(self.items)
+    def dequeue(self):
+        return self.items.pop(0)
+    def enqueue(self,obj):
+        self.items.append(obj)
+    def size(self):
+        return len(self.items)
+    def top(self):
+        return self.items[0]
+    def isEmpty(self):
+        return self.items==[]
+
+thequeue=Queue()
+
+thequeue.enqueue("a")
+thequeue.enqueue("b")
+thequeue.enqueue("c")
+thequeue.enqueue("d")
+thequeue.enqueue("e")
+
+print(thequeue)
+
+thequeue.enqueue("f")
+print(thequeue)
+
+print(thequeue.dequeue())
+    
+    

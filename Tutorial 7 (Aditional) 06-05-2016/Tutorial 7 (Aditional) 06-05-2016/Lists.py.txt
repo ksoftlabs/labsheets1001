@@ -1,0 +1,17 @@
+thelist=["Mango","Banana","Apple","Papaya"]
+print(thelist)
+print(thelist[2])
+thelist.append("Guava")
+print(thelist)
+thelist.insert(1,"Papaya")
+print(thelist[3])
+print (len(thelist))
+print (thelist.pop())
+del thelist[2]
+print (thelist)
+print(thelist.index("Apple"))
+print(thelist.count("Papaya"))
+thelist.sort()
+print(thelist)
+thelist.reverse()
+print (thelist)

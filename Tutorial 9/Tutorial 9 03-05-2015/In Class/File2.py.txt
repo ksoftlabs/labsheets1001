@@ -1,0 +1,18 @@
+marks=open("Marks.txt","r")
+finalmarks=open("FinalMarks.txt","w")
+student=[]
+string=""
+
+for line in marks:
+    total=0
+    student=line.split()
+    #if len(student)==11:
+    for i in range(1,len(student)-1):
+        total=total+int(student[i])
+    string=student[0]+" "+str(total)+" "+str(total/10)+"\n"
+    finalmarks.write(string)
+marks.close()
+finalmarks.close()
+
+        
+        
